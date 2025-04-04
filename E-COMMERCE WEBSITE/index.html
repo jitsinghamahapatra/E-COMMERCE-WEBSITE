@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenvy | Modern Clothing Store</title>
+    <link rel="icon" href="/IMAGES/favicon.png" type="icon/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>ZENVY</h2>
+        <div class="menu-toggle">&#9776;</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="/PAGES/man.html">Men</a>
+            <a href="/PAGES/women.html">Women</a>
+            <a href="/PAGES/contactus.html">Contact us</a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>New Collection</h1>
+            <p>Discover our curated selection of premium fashion</p>
+            <br>
+            <a href="/PAGES/newarrivel.html"><button class="cta-button">Shop Now</button></a>
+        </div>
+        <div class="hero-slider">
+            <div class="hero-slide" style="background-image: url('/IMAGES/hero-section1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('/IMAGES/hero-section2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('/IMAGES/hero-section3.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('/IMAGES/hero-section4.jpg');"></div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/summerdress1.jpg" class="product-image">
+                <h3 class="product-name">Floral Summer Dress</h3>
+                <p class="product-price">₹899</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/croptop3.webp" class="product-image">
+                <h3 class="product-name">Black Crop top</h3>
+                <p class="product-price">₹399</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/MAN/Cotton-Panjabi.jpg" class="product-image">
+                <h3 class="product-name">Cotton Panjabi</h3>
+                <p class="product-price">₹699</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/MAN/tshirt1.jpg" class="product-image">
+                <h3 class="product-name">Classic Cotton T-Shirt</h3>
+                <p class="product-price">₹699</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/croptop1.jpg" class="product-image">
+                <h3 class="product-name">Vogue Crop</h3>
+                <p class="product-price">₹699</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/Waist-Dress.jpg" class="product-image">
+                <h3 class="product-name">Waist Dress</h3>
+                <p class="product-price">₹1099</p>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ZENVY, All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll(".hero-slide");
+        const slider = document.querySelector(".hero-slider");
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(nextSlide, 3000);
+
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+                navLinks.classList.remove("show");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

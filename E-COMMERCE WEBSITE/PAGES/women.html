@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenvy | WOMEN'S COLLECTION</title>
+    <link rel="icon" href="/IMAGES/favicon.png" type="icon/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .navbar {
+            background: #ffffff;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B6B;
+        }
+        
+        .nav-links a[href="#"] {
+            color: red;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .featured-products {
+            padding: 5rem 5%;
+            margin-top: 80px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product-price {
+            color: #FF6B6B;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #474747;
+            color: white;
+            padding: 1rem 5vw;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 60px;
+                right: 5%;
+                width: 200px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2>ZENVY</h2>
+        <div class="menu-toggle">&#9776;</div>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/PAGES/man.html">Men</a>
+            <a href="#">Women</a>
+            <a href="/PAGES/contactus.html">Contact us</a>
+        </div>
+    </nav>
+
+    <section class="featured-products">
+        <h2 class="section-title">Women's Fashion</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/tshirt.jpg" alt="Classic Crew Tee" class="product-image">
+                <h3 class="product-name">Classic Crew Tee</h3>
+                <p class="product-price">₹599</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/Sharee1.jpg" alt="Ethereal Saree" class="product-image">
+                <h3 class="product-name">Ethereal Saree</h3>
+                <p class="product-price">₹1299</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/croptop2.jpg" alt="Chic Crop Top" class="product-image">
+                <h3 class="product-name">Chic Crop Top</h3>
+                <p class="product-price">₹399</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/croptop1.jpg" alt="Vogue Crop" class="product-image">
+                <h3 class="product-name">Vogue Crop</h3>
+                <p class="product-price">₹699</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/womenTrousers1.jpg" alt="Urban Trousers" class="product-image">
+                <h3 class="product-name">Urban Trousers</h3>
+                <p class="product-price">₹699</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/womenstrackshot1.jpg" alt="Athleisure Shorts" class="product-image">
+                <h3 class="product-name">Athleisure Shorts</h3>
+                <p class="product-price">₹799</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/womenjeans1.jpg" alt="Skyline Denim" class="product-image">
+                <h3 class="product-name">Skyline Denim</h3>
+                <p class="product-price">₹499</p>
+            </div>
+
+            <div class="product-card">
+                <img src="/IMAGES/WOMEN/womenjeanes2.jpg" alt="Indigo Edge Jeans" class="product-image">
+                <h3 class="product-name">Indigo Edge Jeans</h3>
+                <p class="product-price">₹899</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            2025 ZENVY, All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
